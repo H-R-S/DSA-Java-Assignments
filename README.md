@@ -78,5 +78,3 @@ public class InsertionSort {
 ```
 1 5 6 12 29 34 67 72 
 ```
-
-
