@@ -1,6 +1,6 @@
 # Data Structure & Algorithm (Java) Assignmets 01 (Solved)
 ___
-# [Assignment: 01]()
+# [Assignment: 01](https://github.com/H-R-S/DSA-Java-Assignments/blob/main/Assignment-01/Readme/Assignment-01.md)
 #### Assignment 01 word file (with Code & ScreenShots) : [DSA_Assignment-01.docs](https://github.com/H-R-S/DSA-Java-Assignments/tree/main/Assignment-01/WordFile)
 ## Question:
 ```
