@@ -1,6 +1,6 @@
 # Data Structure & Algorithm (Java) Assignmets 02 (Solved)
 ___
-# [Assignment: 02]()
+# [Assignment: 02](https://github.com/H-R-S/DSA-Java-Assignments/blob/main/Assignment-02/Readme/Assignment-02.md)
 #### Assignment 02 word file (with Code & ScreenShots) : [DSA_Assignment-02.docs]()
 ## Question:
 Q. Implement hash-table using separate chaining approach
