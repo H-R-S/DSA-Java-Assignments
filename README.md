@@ -1,10 +1,10 @@
 # Data Structure & Algorithm (Java) Assignmets Solved
 ___
-# [Assignment: 01]()
-# [Assignment: 02]()
+# [Assignment: 01](https://github.com/H-R-S/DSA-Java-Assignments/blob/main/Assignment-01/Readme/Assignment-01.md)
+# [Assignment: 02](https://github.com/H-R-S/DSA-Java-Assignments/blob/main/Assignment-02/Readme/Assignment-02.md)
 # [Assignment: 03]()
 ___
-# [Assignment: 01]()
+# [Assignment: 01](https://github.com/H-R-S/DSA-Java-Assignments/blob/main/Assignment-01/Readme/Assignment-01.md)
 #### Assignment 01 word file (with Code & ScreenShots) : [DSA_Assignment-01.docs](https://github.com/H-R-S/DSA-Java-Assignments/tree/main/Assignment-01/WordFile)
 ## Question:
 ```
@@ -88,8 +88,8 @@ public class InsertionSort {
 #### InsertionSort.java:
 ![InsertionSort.java](https://github.com/H-R-S/DSA-Java-Assignments/blob/main/Assignment-01/ScreenShots/Code/InsertionSort.JPG)
 ___
-# [Assignment: 02]()
-#### Assignment 02 word file (with Code & ScreenShots) : [DSA_Assignment-02.docs](https://github.com/H-R-S/DSA-Java-Assignments/tree/main/Assignment-01/WordFile)
+# [Assignment: 02](https://github.com/H-R-S/DSA-Java-Assignments/blob/main/Assignment-02/Readme/Assignment-02.md)
+#### Assignment 02 word file (with Code & ScreenShots) : [DSA_Assignment-02.docs]()
 ## Question:
 Q. Implement hash-table using separate chaining approach
 ### Code:
