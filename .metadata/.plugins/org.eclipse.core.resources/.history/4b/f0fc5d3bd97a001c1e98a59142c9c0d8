@@ -1,9 +1,0 @@
-public class node {
-private String name;
-private int tel;
-private int id;
-public node()
-{
-tel = 0;
-id = 0;
-}
