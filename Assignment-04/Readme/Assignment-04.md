@@ -4,7 +4,9 @@ ___
 #### Assignment 04 word file (with Code & ScreenShots) : [DSA_Assignment-04.docs]()
 ## Question No 01:									5 Marks
 Consider the set of 6 processes whose arrival time and burst time are given below-
+
 ![question](https://github.com/H-R-S/DSA-Java-Assignments/blob/main/Assignment-04/ScreenShots/Question/question.JPG)
+
 If the CPU scheduling policy is Round Robin with time quantum = 2, 
 calculate the average waiting time and average turnaround time. (Show all steps of solution)
 Implement Round Robin policy in Java Programming language 
