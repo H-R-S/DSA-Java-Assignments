@@ -1,0 +1,291 @@
+import java.io.*;
+
+
+
+public class scheduling {
+
+void fcfs() throws Exception, IOException
+
+{
+
+System.out.println("*******First Come First Serve Algorithm*******");
+
+System.out.println("Enter the number of processes:\n");
+
+int n;
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+n = Integer.parseInt(br.readLine());
+
+int a[] = new int[n],b[] = new int[n],s[] = new int[n],c;
+
+for(c=0;c<n;c++)
+
+{
+
+System.out.println("Enter arrival time for process \n" + (c+1));
+
+a[c] = Integer.parseInt(br.readLine());
+
+  
+
+System.out.println("Enter burst time for process \n" + (c+1));
+
+b[c] = Integer.parseInt(br.readLine());
+
+}
+
+s[0]=a[0];
+
+for(c=1;c<n;c++)
+
+{
+
+s[c]=s[c-1]+b[c-1];
+
+if(s[c]<a[c])
+
+s[c]=a[c];
+
+}
+
+float aw=0,at=0;
+
+System.out.println("\nPNo\tWT\tTAT\n");
+
+for(c=0;c<n;c++)
+
+{
+
+aw+=s[c]-a[c];
+
+at+=s[c]-a[c]+b[c];
+
+System.out.println((c+1)+ "\t" + (s[c]-a[c]) + "\t" + (s[c]-a[c]+b[c]));
+
+}
+
+System.out.println("\nAverage Waiting Time= " + (aw/n));
+
+System.out.println("\nAverage Turn Around Time= " + (at/n));
+
+}
+
+void sjf() throws Exception, IOException
+
+{
+
+System.out.println("*******Shortest Job First Algorithm*******");
+
+System.out.println("Enter the number of processes:\n");
+
+int n;
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+n = Integer.parseInt(br.readLine());
+
+int a[] = new int[n],b[] = new int[n],s[] = new int[n],c;
+
+int d,e,t;
+
+for(c=0;c<n;c++)
+
+{
+
+System.out.println("Enter arrival time for process \n" + (c+1));
+
+a[c] = Integer.parseInt(br.readLine());
+
+System.out.println("Enter burst time for process \n" + (c+1));
+
+b[c] = Integer.parseInt(br.readLine());
+
+s[c]=-1;
+
+}
+
+for(e=0,t=a[0];;)
+
+{
+
+for(d=0,c=9999;d<n;d++)
+
+if(a[d]<=t&&s[d]==-1&&b[d]<c)
+
+{
+
+c=b[d];
+
+e=d;
+
+}
+
+s[e]=t;
+
+t+=b[e];
+
+for(d=0;d<n;d++)
+
+if(s[d]==-1)
+
+break;
+
+if(d==n)
+
+break;
+
+}
+
+float aw=0,at=0;
+
+System.out.println("\nPNo\tWT\tTAT");
+
+for(c=0;c<n;c++)
+
+{
+
+aw+=s[c]-a[c];
+
+at+=s[c]-a[c]+b[c];
+
+System.out.println((c+1) + "\t" + (s[c]-a[c]) + "\t" + (s[c]-a[c]+b[c]));
+
+}
+
+System.out.println("\nAverage Waiting Time= " + (aw/n));
+
+System.out.println("\nAverage Turn Around Time= " + (at/n));
+
+}
+
+void roundrobin() throws Exception, IOException
+
+{
+
+System.out.println("*******Round Robin Algorithm*******");
+
+System.out.println("Enter the number of processes:\n");
+
+int n;
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+n = Integer.parseInt(br.readLine());
+
+int a[] = new int[n],b[] = new int[n];
+
+int r[] = new int[n],e[] = new int[n],c,t,tq;
+
+for(c=0;c<n;c++)
+
+{
+
+System.out.println("Enter arrival time for process \n" + (c+1));
+
+a[c] = Integer.parseInt(br.readLine());
+
+  
+
+System.out.println("Enter burst time for process \n" + (c+1));
+
+b[c] = Integer.parseInt(br.readLine());
+
+r[c]=b[c];
+
+}
+
+System.out.println("Enter time quantum:\n");
+
+tq = Integer.parseInt(br.readLine());
+
+for(t=a[0];;)
+
+{
+
+for(c=0;c<n;c++)
+
+{
+
+if(a[c]<=t&&r[c]!=0)
+
+{
+
+if(r[c]<=tq)
+
+{
+
+t+=r[c];
+
+r[c]=0;
+
+e[c]=t;
+
+}
+
+else
+
+{
+
+r[c]-=tq;
+
+t+=tq;
+
+}
+
+}
+
+}
+
+for(c=0;c<n;c++)
+
+if(r[c]!=0)
+
+break;
+
+if(c==n)
+
+break;
+
+}
+
+float aw=0,at=0;
+
+System.out.println("\nPNo\tWT\tTAT");
+
+for(c=0;c<n;c++)
+
+{
+
+aw+=e[c]-a[c]-b[c];
+
+at+=e[c]-a[c];
+
+System.out.println((c+1)+"\t"+(e[c]-a[c]-b[c])+"\t"+(e[c]-a[c]));
+
+}
+
+System.out.println("\nAverage Waiting Time= "+(aw/n));
+
+System.out.println("\nAverage Turn Around Time= "+(at/n));
+
+}
+
+public static void main(String args[]) throws Exception
+
+{
+
+scheduling ob = new scheduling();
+
+ob.fcfs();
+
+ob.sjf();
+
+ob.roundrobin();
+
+}
+
+
+
+}

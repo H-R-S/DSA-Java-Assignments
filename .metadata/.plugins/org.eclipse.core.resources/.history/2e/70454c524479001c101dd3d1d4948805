@@ -1,0 +1,16 @@
+public class main {
+
+	public static void main(String[] args) { 
+		
+		RoundRobin rr = new RoundRobin();
+        
+        int processes[] = { 1, 2, 3, 4, 5, 6, 7, 8}; 
+        int n = processes.length; 
+       
+        int burst_time[] = {4, 5, 2, 1, 6, 3, 3, 1}; 
+      
+        int quantum = 2; 
+        
+        rr.findavgTime(processes, n, burst_time, quantum); 
+    } 
+}

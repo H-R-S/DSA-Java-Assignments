@@ -1,0 +1,20 @@
+public class main {
+	
+	public static void main(String[] args) {
+
+		Map<String, Integer> map = new Map<>();
+		
+		map.add("Haris", 1);
+		map.add("51379",2);
+		map.add("Data Structure & Algorithm", 4);
+		map.add("Sir Suffyan", 5);
+
+		System.out.println(map.size());
+		
+		System.out.println(map.remove("Data Structure & Algorithm"));
+		System.out.println(map. remove("Sir Suffyan"));
+		
+		System.out.println(map.size());
+		System.out.println(map.isEmpty());
+	}	
+}

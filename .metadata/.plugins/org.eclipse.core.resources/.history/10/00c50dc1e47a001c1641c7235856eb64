@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class main {
+	
+public static void main(String[] args) {
+		
+		int size;
+		int option;
+		
+		hashing h = new hashing();
+		Scanner scan = new Scanner(System.in);
+		
+		size = 20;
+		
+		System.out.println("\n1.Create record\\n2.Display record\\n3.Search record\\n4.Update record\\n5.Delete record");
+		
+		if ()
+		
+		h.create_record(size);
+		h.display_record(size);
+		h.search_record(size);
+		h.update_record(size);
+		h.delete_record(size);
+	}
+}
