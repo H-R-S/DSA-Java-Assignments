@@ -1,7 +1,7 @@
 # Data Structure & Algorithm (Java) Assignmets 05 (Solved)
 ___
 # [Assignment: 05](https://github.com/H-R-S/DSA-Java-Assignments/blob/main/Assignment-05/Readme/Assignment-05.md)
-#### Assignment 05 word file (with Code & ScreenShots) : [DSA_Assignment-04.docs]()
+#### Assignment 05 word file (with Code & ScreenShots) : [DSA_Assignment-05.docs]()
 ## Question No 01:	
 Create A HashTable For This PhoneBook Class. hashtable stores  phone number, name of the user,  Phone number will be used for hash function . you are required to store 10 records .
 Use double hashing for collision.
