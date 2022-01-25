@@ -1,41 +1,66 @@
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class main {
 	
-public static void main(String[] args) {
+	public static void main(String[] args) {
 		
-		int size;
-		int option;
-		
-		hashing h = new hashing();
-		Scanner scan = new Scanner(System.in);
-		
-		size = 20;
-		
-		System.out.println("PhoneBook");
-		System.out.println("\n1.Create record\n2.Display record\n3.Search record\n4.Update record\n5.Delete record");
-		System.out.println("\nEnter your option : ");
-		option = scan.nextInt();
-		
-		if ( option == 1 ) {
-			
-			h.create_record(size);
-		}
-		else if ( option == 2 ) {
-			
-			h.display_record(size);
-		}
-		else if ( option == 3 ) {
-			
-			h.search_record(size);
-		}
-		else if ( option == 4 ) {
-	
-			h.update_record(size);
-		}
-		else {
-			
-			h.delete_record(size);
-		}
-	}
+		PhoneBook pb = new PhoneBook();
+
+        pb.lphonebook = pb.lRead();
+
+        int lch;
+        char lcn = 'y';
+
+        Scanner scan = new Scanner(System.in);
+
+        while(lcn == 'y') {
+
+            pb.lSMenu();
+
+            System.out.println("Enter your choice:");
+
+            lch = scan.nextInt();
+
+            switch(lch) {
+
+                 case 1:
+              	   pb.lView();
+              	   break;
+
+                 case 2:
+              	   pb.ladd();
+              	   break;
+
+                 case 3:
+              	   pb.ldelete();
+              	   break;
+
+                 case 4:
+              	   pb.lsName();
+              	   break;
+
+                 case 7:
+              	   System.exit(0);
+              	   break;
+
+                 default: 
+              	   System.out.println("\nInvalid choice!");
+
+            }
+            
+            try {
+
+          	  InputStreamReader lIsr=new InputStreamReader(System.in);
+
+          	  System.out.println("\nPress 'y' to continue : ");
+
+          	  lcn=(char)lIsr.read();
+
+            }
+
+            catch(IOException ie) { }
+        }
+   }
 }
